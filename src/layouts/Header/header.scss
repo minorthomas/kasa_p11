@@ -1,0 +1,15 @@
+header {
+    
+    nav{
+        display: flex;
+        flex-direction: row;
+
+        button {
+
+            svg {
+                width: 2em;
+                height: 2em;
+            }
+        }
+    }
+}
