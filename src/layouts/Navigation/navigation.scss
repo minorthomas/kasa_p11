@@ -17,8 +17,15 @@ header {
         ul {
             position: absolute;
             right: 0;
-            top: 3.5em;
+            top: 4em;
             text-align: end;
+            z-index: 1;
+            background-color: $primary;
+            padding: 1em 2em;
+            border-radius: 0.5em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8em;
 
             @include device-size(small) {
                 position: static;
@@ -26,15 +33,21 @@ header {
                 flex-direction: row;
                 gap: 1em;
                 align-items: center;
+                padding: inherit;
+                background-color: inherit;
             }
 
             li {
                 
                 a {
-                    color: $primary;
+                    color: white;
 
                     &:hover {
-                        font-weight: 700;
+                        color: black;
+                    }
+
+                    @include device-size(small) {
+                        color: $primary;
                     }
                 }
             }

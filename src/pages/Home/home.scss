@@ -1,0 +1,67 @@
+@use '../../style/utils' as *;
+
+#root{
+    
+    .top-card {
+        position: relative;
+        margin: 1em 0;
+
+        img {
+            height: 5em;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 0.6em;
+            filter: brightness(70%);
+
+            @include device-size(small) {
+                height: 10em;
+            }
+        }
+
+        h1 {
+            position: absolute;
+            color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1em;
+            width: 100%;
+            padding: 0 1em;
+
+            @include device-size(small) {
+                font-size: 1.4em;
+                width: inherit;
+            }
+
+            @include device-size(large) {
+                font-size: 1.6em;
+            }
+        }
+    }
+
+    .housing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include device-size(small) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &_card {
+            width: 100%;
+            max-width: 21em;
+            height: 16em;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 16em;
+                object-fit: cover;
+                filter: brightness(80%);
+            }
+        }
+    }
+}
