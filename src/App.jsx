@@ -1,14 +1,14 @@
 import React from 'react';
-import { Header } from './layouts/Header/Header';
+import { Navigation } from './layouts/Navigation/Navigation';
 import { Footer } from './layouts/Footer/Footer';
 import { Router } from './router';
 
 function App() {
     return (
         <>
-            <Header></Header>
+            <Navigation></Navigation>
             <Router/>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </>
     );
 }

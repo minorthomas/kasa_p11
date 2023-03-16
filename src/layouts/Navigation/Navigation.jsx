@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Logo } from '../../components/Logo';
-import './header.scss';
+import './navigation.scss';
 
 const PAGES = [
     {
@@ -27,7 +27,7 @@ function CreateLink({ route, text }) {
     );
 }
 
-export function Header() {
+export function Navigation() {
     const [toggleNav, setToggleNav] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
 
@@ -39,7 +39,7 @@ export function Header() {
         window.addEventListener('resize', () => {
             setWidth(window.innerWidth);
 
-            if (window.innerWidth > 500) {
+            if (window.innerWidth >= 576) {
                 setToggleNav(false);
             }
         });
@@ -51,7 +51,7 @@ export function Header() {
                 <Link className='logo' to='/'>
                     <Logo />
                 </Link>
-                {(toggleNav || width > 500) && (
+                {(toggleNav || width >= 576) && (
                     <ul>
                         {PAGES.map((link, index) => (
                             <CreateLink
@@ -62,7 +62,7 @@ export function Header() {
                         ))}
                     </ul>
                 )}
-                {width < 500 && (
+                {width < 576 && (
                     <button onClick={toggleNavSmallScreen}>
                         <svg
                             clipRule='evenodd'

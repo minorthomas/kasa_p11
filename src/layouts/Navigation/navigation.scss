@@ -1,0 +1,57 @@
+@use '../../style/utils' as *;
+
+header {
+    
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+
+        .logo {
+            svg {
+                width: 8em;
+            }
+        }
+
+        ul {
+            position: absolute;
+            right: 0;
+            top: 3.5em;
+            text-align: end;
+
+            @include device-size(small) {
+                position: static;
+                display: flex;
+                flex-direction: row;
+                gap: 1em;
+                align-items: center;
+            }
+
+            li {
+                
+                a {
+                    color: $primary;
+
+                    &:hover {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        
+
+        button {
+
+            svg {
+                width: 2em;
+                height: 2em;
+                fill: $primary;
+
+                &:hover {
+                    fill: $hover;
+                }
+            }
+        }
+    }
+}
