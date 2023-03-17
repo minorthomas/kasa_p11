@@ -14,9 +14,16 @@ body {
     margin: 0 auto;
     font-family: $font;
     padding: 0 2em;
+    height: 100vh;
+    max-height: 100%;
+
+    #root {
+        height: 100%;
+    }
 
     a {
         text-decoration: none;
+        width: fit-content;
     }
 
     button,

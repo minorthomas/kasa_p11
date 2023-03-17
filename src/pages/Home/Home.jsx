@@ -10,10 +10,10 @@ export function Home() {
 
     return (
         <>
-            <TopCard identifier='top-card' source={TopCardImg} title='Montagne en bord de mer' insideText='Chez vous, partout et ailleurs'/>
+            <TopCard identifier='top-card' source={TopCardImg} alt='Montagne en bord de mer' title='Chez vous, partout et ailleurs'/>
             <main className='housing'>
-                {data.map((housing, index) => (
-                    <Card key={index} identifier='housing_card' source={housing.cover} title={housing.title} />
+                {data.map((housing) => (
+                    <Card key={housing.id} id={housing.id} cssClass='housing_card' source={housing.cover} title={housing.title} />
                 ))}
             </main>
         </>
