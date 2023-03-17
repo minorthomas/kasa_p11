@@ -1,0 +1,44 @@
+@use '../../style/utils' as *;
+
+.page-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $primary;
+    margin-top: 8em;
+    gap: 5em;
+
+    div {
+        h1 {
+            font-size: 5em;
+
+            @include device-size(medium) {
+                font-size: 18em;
+            }
+        }
+    
+        h2 {
+            font-weight: 500;
+            font-size: 1em;
+
+            @include device-size(medium) {
+                font-size: 2.2em;
+            }
+        }
+    }
+
+    a {
+        font-size: 0.8em;
+        color: $primary;
+        text-decoration: underline;
+
+        @include device-size(medium) {
+            font-size: 1em;
+        }
+
+        &:hover {
+            color: $hover;
+        }
+    }
+}
