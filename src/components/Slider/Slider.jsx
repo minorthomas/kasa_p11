@@ -23,7 +23,7 @@ export function Slider({ images, title }) {
         <div className='slider'>
             <button onClick={handlePrev}>Précédent</button>
             {currentImg !== null && (
-                <img src={gallery[currentImg]} alt={`Logement`} />
+                <img src={gallery[currentImg]} alt={title} />
             )}
             <button onClick={handleNext}>Suivante</button>
         </div>

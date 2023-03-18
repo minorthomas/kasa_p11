@@ -18,7 +18,7 @@ export function Housing() {
 
     return (
         <main>
-            <Slider images={housing.pictures}/>
+            <Slider images={housing.pictures} title={housing.title}/>
         </main>
     );
 }
