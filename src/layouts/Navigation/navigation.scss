@@ -10,6 +10,7 @@ header {
         .logo {
             svg {
                 width: 8em;
+                fill: $primary;
             }
         }
 
@@ -41,11 +42,11 @@ header {
                     color: white;
 
                     &:hover {
-                        color: black;
+                        color: black !important;
                     }
 
                     @include device-size(small) {
-                        color: $primary;
+                        color: $primary !important;
                     }
                 }
             }

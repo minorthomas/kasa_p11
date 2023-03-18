@@ -8,7 +8,7 @@ function App() {
         <>
             <Navigation></Navigation>
             <Router/>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </>
     );
 }

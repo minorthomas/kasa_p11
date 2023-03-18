@@ -1,0 +1,27 @@
+@use '../../style/utils' as *;
+
+footer {
+    background-color: $tertiary;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    gap: 1em;
+    text-align: center;
+    margin-top: auto;
+
+    svg {
+        width: 7.6em;
+        fill: white;
+    }
+
+    p {
+        font-size: 0.75em;
+
+        @include device-size(small) {
+            font-size: 1em;
+        }
+    }
+}
