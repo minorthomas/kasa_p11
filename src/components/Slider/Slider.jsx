@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './slider.scss';
 
 export function Slider({ images, title }) {
     const [currentImg, setCurrentImg] = useState(null);
@@ -7,7 +8,7 @@ export function Slider({ images, title }) {
     useEffect(() => {
         setGallery(images);
         if (images) {
-            setCurrentImg(0)
+            setCurrentImg(0);
         }
     }, [images]);
 
@@ -21,11 +22,29 @@ export function Slider({ images, title }) {
 
     return (
         <div className='slider'>
-            <button onClick={handlePrev}>Précédent</button>
+            <button className='slider_btn slider_btn-prev' onClick={handlePrev}>
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='24'
+                    height='24'
+                    viewBox='0 0 24 24'
+                >
+                    <path d='M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z' />
+                </svg>
+            </button>
             {currentImg !== null && (
                 <img src={gallery[currentImg]} alt={title} />
             )}
-            <button onClick={handleNext}>Suivante</button>
+            <button className='slider_btn slider_btn-next' onClick={handleNext}>
+                <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='24'
+                    height='24'
+                    viewBox='0 0 24 24'
+                >
+                    <path d='M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z' />
+                </svg>
+            </button>
         </div>
     );
 }

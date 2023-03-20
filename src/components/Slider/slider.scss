@@ -1,0 +1,59 @@
+@use '../../style/utils' as *;
+
+.slider {
+    height: 16em;
+    position: relative;
+
+    @include device-size(small) {
+        height: 26em;
+    }
+
+    &_btn {
+        position: absolute;
+        z-index: 1;
+
+        svg {
+            fill: white;
+            width: 1.5em;
+            height: 1.5em;
+
+            @include device-size(large) {
+                width: 4.5em;
+                height: 4.5em;
+            }
+
+            &:hover {
+                fill: $primary;
+            }
+        }
+
+        &-prev {
+            top: 50%;
+            left: 1.5em;
+            transform: translate(-50%, -50%) rotate(90deg);
+
+            @include device-size(large) {
+                left: 3em;
+            }
+        }
+
+        &-next {
+            top: 50%;
+            right: 0;
+            transform: translate(-50%, -50%) rotate(-90deg);
+
+            @include device-size(large) {
+                right: -1.5em;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(80%);
+        border-radius: 0.5em;
+    }
+}
