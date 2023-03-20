@@ -9,7 +9,7 @@ import HOUSING from '../data/housing.json';
 
 export function Router() {
     const { data, isLoading, error } = useFetch(HOUSING);
-    const housing = data.housing
+    const { housing } = data;
 
     return (
         <Routes>

@@ -9,7 +9,7 @@ export function Dropdown({ title, content, type }) {
     }
 
     return (
-        <section className='dropdown'>
+        <li className='dropdown'>
             <button onClick={handleToggle}>
                 <p>{title}</p>
                 <svg
@@ -25,6 +25,6 @@ export function Dropdown({ title, content, type }) {
 
             {(toggleDropdown && type === 'paragraph') && <p>{content}</p>}
             {(toggleDropdown && type === 'list') && <ul>{content}</ul>}
-        </section>
+        </li>
     );
 }

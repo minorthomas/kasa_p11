@@ -3,8 +3,8 @@ import './tag.scss';
 
 export function Tag({tag}) {
     return (
-        <div className='tag'>
+        <li className='tag'>
             {tag}
-        </div>
+        </li>
     );
 }

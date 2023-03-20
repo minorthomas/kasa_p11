@@ -9,7 +9,7 @@ export function Home({ data, isLoading, error }) {
     return (
         <>
             <TopCard
-                identifier='top-card'
+                identifier='home_topcard'
                 source={TopCardImg}
                 alt='Montagne en bord de mer'
                 title='Chez vous, partout et ailleurs'

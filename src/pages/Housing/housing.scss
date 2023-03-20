@@ -1,0 +1,123 @@
+@use '../../style/utils' as *;
+
+.accommodation {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 2em;
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        @include device-size(small) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        div:nth-child(1) {
+            color: $primary;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            
+            h1 {
+                font-size: 1.3em;
+                font-weight: 500;
+
+                @include device-size(medium) {
+                    font-size: 2em;
+                }
+            }
+
+            h2 {
+                font-size: 0.87em;
+                font-weight: 500;
+
+                @include device-size(medium) {
+                    font-size: 1.12em;
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.8em;
+
+                li {
+                    background-color: $primary;
+                    color: white;
+                    padding: 0.5em 2em;
+                    font-size: 0.7em;
+                    border-radius: 0.5em;
+                }
+            }
+        }
+
+        div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: end;
+
+            @include device-size(small) {
+                flex-direction: column-reverse;
+                justify-content: center;
+            }
+
+            .rating {
+                display: flex;
+                flex-direction: row;
+                gap: 0.2em;
+
+                svg {
+                    width: 1em;
+                    fill: $primary;
+
+                    @include device-size(medium) {
+                        width: 1.2em;
+                    }
+                }
+            }
+
+            .host {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5em;
+
+                p{
+                    max-width: min-content;
+                    font-size: 0.9em;
+                    color: $primary;
+
+                    @include device-size(medium) {
+                        font-size: 1.12em
+                    }
+                }
+
+                img {
+                    width: 2.6em;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &_dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+        width: 100%;
+
+        @include device-size(medium) {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+}

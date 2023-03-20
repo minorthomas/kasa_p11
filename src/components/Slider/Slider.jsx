@@ -4,7 +4,7 @@ import './slider.scss';
 export function Slider({ images, title }) {
     const [currentImg, setCurrentImg] = useState(null);
     const [gallery, setGallery] = useState([]);
-    const minLength = 2
+    const minLength = 2;
 
     useEffect(() => {
         setGallery(images);
