@@ -1,24 +1,13 @@
 import React from 'react';
-import { Dropdown } from '../../components/Dropdown/Dropdown';
-
-const list = ['test', 'test3', 'test3', 'bonjour'];
+import { useFetch } from '../../utils/hooks';
+import HOUSING from '../../data/housing.json';
 
 export function About() {
+    const { data, isLoading, error } = useFetch(HOUSING);
+
     return (
         <div>
-            <Dropdown
-                type='paragraph'
-                title='Respect'
-                content='La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme'
-            />
-            <br />
-            <Dropdown
-                type='list'
-                title='Respect'
-                content={list.map((liste, index) => (
-                    <li key={index}>{liste}</li>
-                ))}
-            />
+            About
         </div>
     );
 }

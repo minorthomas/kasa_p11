@@ -4,7 +4,8 @@ import { TopCard } from '../../components/TopCard';
 import TopCardImg from '../../assets/img/home_top-card.webp';
 import './home.scss';
 
-export function Home({ data }) {
+export function Home({ data, isLoading, error }) {
+
     return (
         <>
             <TopCard
@@ -14,15 +15,21 @@ export function Home({ data }) {
                 title='Chez vous, partout et ailleurs'
             />
             <main className='housing'>
-                {data.map((housing) => (
-                    <Card
-                        key={housing.id}
-                        id={housing.id}
-                        cssClass='housing_card'
-                        source={housing.cover}
-                        title={housing.title}
-                    />
-                ))}
+                {isLoading ? (
+                    <p>Chargement..</p>
+                ) : (
+                    <>
+                        {data.map((housing) => (
+                            <Card
+                                key={housing.id}
+                                id={housing.id}
+                                cssClass='housing_card'
+                                source={housing.cover}
+                                title={housing.title}
+                            />
+                        ))}
+                    </>
+                )}
             </main>
         </>
     );
