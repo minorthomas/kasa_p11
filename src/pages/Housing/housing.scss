@@ -75,7 +75,6 @@
 
                 svg {
                     width: 1em;
-                    fill: $primary;
 
                     @include device-size(medium) {
                         width: 1.2em;

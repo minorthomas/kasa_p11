@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './slider.scss';
 
 export function Slider({ images, title }) {
-    const [currentImg, setCurrentImg] = useState(null);
-    const [gallery, setGallery] = useState([]);
+    const [currentImg, setCurrentImg] = useState(0);
     const minLength = 2;
-
-    useEffect(() => {
-        setGallery(images);
-        if (images) {
-            setCurrentImg(0);
-        }
-    }, [images]);
 
     function handlePrev() {
         setCurrentImg(currentImg === 0 ? images.length - 1 : currentImg - 1);
@@ -23,9 +15,9 @@ export function Slider({ images, title }) {
 
     return (
         <>
-            {currentImg !== null && (
+            {images && (
                 <div className='slider'>
-                    {gallery.length >= minLength && (
+                    {images.length >= minLength && (
                         <>
                             <button
                                 className='slider_btn slider_btn-prev'
@@ -41,7 +33,7 @@ export function Slider({ images, title }) {
                                 </svg>
                             </button>
                             <p className='slider_index'>{`${currentImg + 1}/${
-                                gallery.length
+                                images.length
                             }`}</p>
                             <button
                                 className='slider_btn slider_btn-next'
@@ -61,7 +53,7 @@ export function Slider({ images, title }) {
 
                     <img
                         className='slider_img'
-                        src={gallery[currentImg]}
+                        src={images[currentImg]}
                         alt={title}
                     />
                 </div>

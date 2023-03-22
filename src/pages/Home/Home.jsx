@@ -6,6 +6,10 @@ import './home.scss';
 
 export function Home({ data, isLoading, error }) {
 
+    if (error) {
+        return <p>Erreur...</p>;
+    }
+
     return (
         <>
             <TopCard
