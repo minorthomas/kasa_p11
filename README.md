@@ -3,10 +3,11 @@
 Créez une plateforme de logement.
 
 ## Objectifs
-1. Développer le routage du site avec React-router-dom.
-2. Développer les pages et les composants.
-3. Afficher les logements à partir d'un fichier JSON.
-4. Intégrer la maquette fournie. Style du site avec SASS.
+1. Créer le projet avec __create-react-app__
+2. Développer le routage du site avec __react-router-dom__.
+3. Développer les pages et les composants.
+4. Afficher les logements à partir d'un __fichier JSON__.
+5. Intégrer la maquette fournie. Style du site avec __SASS__.
 
 ### Contraintes
 - Pour le défilement des photos dans la galerie (composant Gallery) :
