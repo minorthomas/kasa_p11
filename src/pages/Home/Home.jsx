@@ -3,7 +3,6 @@ import { Card } from '../../components/Card';
 import { TopCard } from '../../components/TopCard';
 import TopCardImg from '../../assets/img/home_top-card.webp';
 import './home.scss';
-import { Loader } from '../../shared/Loader/Loader';
 
 export function Home({ data, isLoading, error }) {
 
@@ -21,7 +20,7 @@ export function Home({ data, isLoading, error }) {
             />
             <main className='housing'>
                 {isLoading ? (
-                    <Loader/>
+                    <p>Chargement..</p>
                 ) : (
                     <>
                         {data.map((housing) => (
