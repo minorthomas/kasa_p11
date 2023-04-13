@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { Logo } from '../../components/Logo';
+import { Logo } from '../../shared/Logo';
 import './navigation.scss';
 
 const PAGES = [
