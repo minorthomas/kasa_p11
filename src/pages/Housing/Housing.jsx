@@ -5,7 +5,6 @@ import { Tag } from '../../components/Tag/Tag';
 import { Dropdown } from '../../components/Dropdown/Dropdown';
 import './housing.scss';
 import { Rating } from '../../components/Rating';
-import { Loader } from '../../shared/Loader/Loader';
 
 export function Housing({ data, isLoading, error }) {
     const { id } = useParams();
@@ -19,6 +18,7 @@ export function Housing({ data, isLoading, error }) {
                     return housing.id === id;
                 });
                 if (filteredHousing.length === 0) {
+                    // return <Navigate to='/housing/404' replace={true}/>;
                     return navigate('/404');
                 } else {
                     setHousing(filteredHousing[0]);
@@ -33,7 +33,7 @@ export function Housing({ data, isLoading, error }) {
     }
 
     if (isLoading) {
-        return <Loader />;
+        return <p>Chargement...</p>;
     }
 
     return (
