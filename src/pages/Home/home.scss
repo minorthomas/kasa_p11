@@ -1,9 +1,8 @@
 @use '../../style/utils' as *;
 
-.home_topcard {
+.hero {
     position: relative;
     margin: 1em 0;
-
 
     img {
         height: 5em;
@@ -39,31 +38,25 @@
 }
 
 .housing {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-    margin-bottom: 2em;;
+    display: grid;
+    grid-gap: 2em;
+    width: 100%;
 
     @include device-size(small) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
         background-color: $secondary;
         padding: 2em;
         border-radius: 1em;
-        gap: 3em;
     }
 
     &_card {
-        max-width: 21em;
         height: 16em;
+        width: 100% !important;
         position: relative;
         transition: all 0.2s;
 
         @include device-size(small) {
-            max-width: 21.25em;
-            height: 21.25em;
+            height: 25em;
         }
 
         img {

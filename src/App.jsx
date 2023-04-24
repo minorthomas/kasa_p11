@@ -1,15 +1,11 @@
-import React from 'react';
-import { Navigation } from './layouts/Navigation/Navigation';
-import { Footer } from './layouts/Footer/Footer';
 import { Router } from './router';
+import { Layout } from './layouts/Layout';
 
 function App() {
     return (
-        <>
-            <Navigation></Navigation>
+        <Layout>
             <Router/>
-            <Footer></Footer>
-        </>
+        </Layout>
     );
 }
 
