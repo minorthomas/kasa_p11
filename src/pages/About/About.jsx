@@ -1,8 +1,8 @@
 import React from 'react';
 import './about.scss';
 import { Dropdown } from '../../components/Dropdown/Dropdown';
-import { TopCard } from '../../components/TopCard';
-import TopCardImg from '../../assets/img/about_top-card.webp';
+import { HeroCard } from '../../components/HeroCard';
+import HeroCardImg from '../../assets/img/about_hero-card.webp';
 
 export function About() {
     const aboutDropdown = [
@@ -34,7 +34,7 @@ export function About() {
 
     return (
         <main className='about'>
-            <TopCard identifier='about_topcard' source={TopCardImg} alt='Forêt près des montagnes enneigées'/>
+            <HeroCard identifier='about_topcard' source={HeroCardImg} alt='Forêt près des montagnes enneigées'/>
             <ul className='about_dropdown'>
                 {aboutDropdown.map((element, index) => (
                     <Dropdown

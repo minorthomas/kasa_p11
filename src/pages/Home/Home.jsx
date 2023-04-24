@@ -1,7 +1,7 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { Card } from '../../components/Card';
-import { TopCard } from '../../components/TopCard';
-import TopCardImg from '../../assets/img/home_top-card.webp';
+import { HeroCard } from '../../components/HeroCard';
+import HeroCardImg from '../../assets/img/home_hero-card.webp';
 import './home.scss';
 import { Loader } from '../../shared/Loader/Loader';
 
@@ -13,9 +13,9 @@ export function Home({ data, isLoading, error }) {
 
     return (
         <>
-            <TopCard
+            <HeroCard
                 identifier='hero'
-                source={TopCardImg}
+                source={HeroCardImg}
                 alt='Montagne en bord de mer'
                 title='Chez vous, partout et ailleurs'
             />
@@ -38,4 +38,10 @@ export function Home({ data, isLoading, error }) {
             </main>
         </>
     );
+}
+
+Home.propTypes = {
+    data: PropTypes.array,
+    isLoading: PropTypes.bool,
+    error: PropTypes.bool
 }

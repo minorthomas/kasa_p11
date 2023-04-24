@@ -6,6 +6,7 @@ import { Dropdown } from '../../components/Dropdown/Dropdown';
 import './housing.scss';
 import { Rating } from '../../components/Rating';
 import { Loader } from '../../shared/Loader/Loader';
+import PropTypes from 'prop-types';
 
 export function Housing({ data, isLoading, error }) {
     const { id } = useParams();
@@ -86,4 +87,10 @@ export function Housing({ data, isLoading, error }) {
             </ul>
         </main>
     );
+}
+
+Housing.propTypes = {
+    data: PropTypes.array,
+    isLoading: PropTypes.bool,
+    error: PropTypes.bool
 }

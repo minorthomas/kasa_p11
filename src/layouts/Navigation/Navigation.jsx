@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import { Logo } from '../../shared/Logo';
 import './navigation.scss';
+import PropTypes from 'prop-types';
 
 const PAGES = [
     {
@@ -45,4 +46,10 @@ export function Navigation() {
             </nav>
         </header>
     );
+}
+
+
+CreateLink.propTypes = {
+    route: PropTypes.string,
+    text: PropTypes.string
 }

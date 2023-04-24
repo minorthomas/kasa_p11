@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './slider.scss';
+import PropTypes from 'prop-types';
 
 export function Slider({ images, title }) {
     const [currentImg, setCurrentImg] = useState(0);
@@ -60,4 +61,9 @@ export function Slider({ images, title }) {
             )}
         </>
     );
+}
+
+Slider.propTypes = {
+    images: PropTypes.array,
+    title: PropTypes.string
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export function Card({ id, cssClass, source, title }) {
     return (
@@ -8,4 +9,12 @@ export function Card({ id, cssClass, source, title }) {
             <h2>{title}</h2>
         </Link>
     );
+}
+
+
+Card.propTypes = {
+    id: PropTypes.string,
+    cssClass: PropTypes.string,
+    source: PropTypes.string,
+    title: PropTypes.string
 }

@@ -1,6 +1,6 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-export function Rating({ rating, id }) {
+export function Rating({ rating }) {
     const stars = [1, 2, 3, 4, 5];
 
     return (
@@ -27,4 +27,8 @@ export function Rating({ rating, id }) {
             ))}
         </ul>
     );
+}
+
+Rating.propTypes = {
+    rating: PropTypes.string
 }

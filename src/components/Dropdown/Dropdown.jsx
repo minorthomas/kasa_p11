@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './dropdown.scss';
+import PropTypes from 'prop-types';
 
 export function Dropdown({ title, content, type }) {
     const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -23,8 +24,13 @@ export function Dropdown({ title, content, type }) {
                 </svg>
             </button>
 
-            {(toggleDropdown && type === 'paragraph') && <p>{content}</p>}
-            {(toggleDropdown && type === 'list') && <ul>{content}</ul>}
+            {toggleDropdown && type === 'paragraph' && <p>{content}</p>}
+            {toggleDropdown && type === 'list' && <ul>{content}</ul>}
         </li>
     );
 }
+
+Dropdown.propTypes = {
+    title: PropTypes.string,
+    type: PropTypes.string,
+};

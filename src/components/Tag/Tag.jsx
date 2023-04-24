@@ -1,5 +1,6 @@
 import React from 'react';
 import './tag.scss';
+import PropTypes from 'prop-types';
 
 export function Tag({tag}) {
     return (
@@ -7,4 +8,8 @@ export function Tag({tag}) {
             {tag}
         </li>
     );
+}
+
+Tag.propTypes = {
+    tag: PropTypes.string
 }
