@@ -34,7 +34,7 @@ export function About() {
 
     return (
         <main className='about'>
-            <HeroCard identifier='about_topcard' source={HeroCardImg} alt='Forêt près des montagnes enneigées'/>
+            <HeroCard identifier='about_hero' source={HeroCardImg} alt='Forêt près des montagnes enneigées'/>
             <ul className='about_dropdown'>
                 {aboutDropdown.map((element, index) => (
                     <Dropdown

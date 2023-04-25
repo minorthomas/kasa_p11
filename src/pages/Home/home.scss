@@ -39,13 +39,13 @@
 
 .housing {
     display: grid;
-    grid-gap: 2em;
+    grid-gap: 3em;
     width: 100%;
 
     @include device-size(small) {
         grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
         background-color: $secondary;
-        padding: 2em;
+        padding: 3em;
         border-radius: 1em;
     }
 
@@ -57,6 +57,11 @@
 
         @include device-size(small) {
             height: 25em;
+        }
+
+        @include device-size(extra-extra-large) {
+            aspect-ratio: 1 / 1;
+            height: inherit;
         }
 
         img {

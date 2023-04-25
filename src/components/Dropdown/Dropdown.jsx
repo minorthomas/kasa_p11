@@ -12,7 +12,7 @@ export function Dropdown({ title, content, type }) {
     return (
         <li className='dropdown'>
             <button onClick={handleToggle}>
-                <p>{title}</p>
+                <h3>{title}</h3>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='24'

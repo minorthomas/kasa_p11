@@ -3,7 +3,7 @@
 .about {
     margin-bottom: 2em;
 
-    &_topcard {
+    &_hero {
         position: relative;
         margin: 1em 0;
 
@@ -24,6 +24,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1em;
+        gap: 2em;
+
+        li {
+            max-width: 80%;
+        }
     }
 }
