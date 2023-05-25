@@ -1,28 +1,27 @@
-# Projet Kasa - OpenClassrooms
+# Project Kasa - OpenClassrooms
 ## Description
-Créez une plateforme de logement.
+Create a housing platform.
 
-## Objectifs
-1. Créer le projet avec __create-react-app__
-2. Développer le routage du site avec __react-router-dom__.
-3. Développer les pages et les composants.
-4. Afficher les logements à partir d'un __fichier JSON__.
-5. Intégrer la maquette fournie. Style du site avec __SASS__.
+## Objectives
+1. Create the project using __create-react-app__.
+2. Develop the site routing using __react-router-dom__.
+3. Develop the __pages__ and __components__.
+4. Display the accommodations from a __JSON file__.
+5. Integrate the provided design. Style the site using __SASS__.
 
-### Contraintes
-- Pour le défilement des photos dans la galerie (composant Gallery) :
-  - Si l'utilisateur se trouve à la première image et qu'il clique sur "image précédente", la galerie affiche la dernière image. 
-  - Inversement, quand l'image affichée est la dernière de la galerie, si l'utilisateur clique sur "image suivante", la galerie affiche la première image. 
-  - S'il n'y a qu'une seule image, les boutons "suivant" et "précédent" ainsi que la numérotation n'apparaissent pas.
-- La galerie doit toujours rester de la même hauteur, celle indiquée sur la maquette Figma. Les images seront donc coupées et centrées dans le cadre de l’image.
-- Collapse : Par défaut, les Collapse sont fermés à l'initialisation de la page. 
-- Si le Collapse est ouvert, le clic de l'utilisateur permet de le fermer.
-  - Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
+## Constraints
+- For scrolling through the photos in the gallery (Gallery component):
+  - If the user is on the first image and clicks on "previous image", the gallery displays the last image.
+  - Conversely, when the displayed image is the last one in the gallery, if the user clicks on "next image", the gallery displays the first image.
+  - If there is only one image, the "next" and "previous" buttons, as well as the numbering, do not appear.
+- The gallery should always maintain the same height as indicated in the Figma design. Therefore, the images will be cropped and centered within the image frame.
+- Collapse: By default, the Collapses are closed when the page is initialized.
+- If the Collapse is open, clicking by the user should close it.
+  - Conversely, if the Collapse is closed, clicking it should open it.
 
-## Voir le projet
-
-1. Clonez le dossier.
-2. Ouvrez le dossier sur votre éditeur de code.
-3. Lancez la commande __npm install__
-4. Lancez la commande __npm start__
-5. Ouvrez votre navigateur et collez l'adresse suivante __http://localhost:3000/__
+## View the Project
+1. Clone the repository.
+2. Open the folder in your code editor.
+3. Run the command __npm install__.
+4. Run the command __npm start__.
+5. Open your browser and paste the following address: __http://localhost:3000/__
